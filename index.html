@@ -24,7 +24,7 @@
     
 <span ng-hide="user"><a ng-click="login()">Login</a></span>
   <span ng-show="user">
- <img src="https://graph.facebook.com/{{user.id}}/picture" class="img-circle w-30" width="30">  {{user.name}} | <a class="btn btn-default btn-sm dropdown-toggle" ng-click="logout()">Logout</a>
+ <img src="https://graph.facebook.com/{{user.id}}/picture" class="img-circle w-30" width="30"> de {{user.first_name}} | <a class="btn btn-default btn-sm dropdown-toggle" ng-click="logout()">Logout</a>
 </span>
 	
 	
