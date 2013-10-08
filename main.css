@@ -1,0 +1,13 @@
+img.w-30 {
+	max-width: 30px !important;
+	height: auto;
+}
+.msg-txt {
+	height: 100px !important;
+}
+.liseven {
+	background: #ccc;
+}
+.repti:first-child {
+	background:#ccc;
+}

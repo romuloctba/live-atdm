@@ -1,0 +1,33 @@
+<html ng-app="atendapp">
+  <head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js'></script>
+    <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+    <script src='https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js'></script>
+  
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" type="text/css" media="screen" title="bootdstrap" charset="utf-8"/>
+ 	<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase-simple-login.js'></script>
+ 	<script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body ng-controller="MyController">
+   <!-- MESSAGENS PANEL -->
+    <div id="messagesDiv" class="table-striped">
+      <div ng-repeat="msg in messages" class="repti">
+      	<em><img src="https://graph.facebook.com/{{msg.idusr}}/picture" class="img-circle w-30" width="30">  {{msg.from}}</em>: {{msg.body}}
+      	</div>
+    </div>
+   <!-- FIM PANEL -->
+   <!-- MESSAGES CONTROLLERS -->
+   
+    <textarea ng-model="msg" ng-keydown="addMessage($event)" class="form-control" placeholder="Digite sua mensagem e pressione [enter]" ></textarea>
+
+    <!-- FIM CONTROLLERS -->
+    
+<span ng-hide="user"><a ng-click="login()">Login</a></span>
+  <span ng-show="user">
+ <img src="https://graph.facebook.com/{{user.id}}/picture" class="img-circle w-30" width="30">  {{user.name}} | <a class="btn btn-default btn-sm dropdown-toggle" ng-click="logout()">Logout</a>
+</span>
+	
+	
+	<script src="app.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>
